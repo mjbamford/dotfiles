@@ -1,0 +1,4 @@
+Bundle 'farseer90718/vim-taskwarrior'
+Bundle 'majutsushi/tagbar'
+Bundle 'vim-scripts/Flex-Development-Support'
+Bundle 'jeroenbourgois/vim-actionscript'
