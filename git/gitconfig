@@ -130,3 +130,6 @@
   enabled = true
 [include]
   path = .gitconfig.user
+[user]
+	name = Michael Bamford
+	email = michael@michaelbamford.com
