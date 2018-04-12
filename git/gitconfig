@@ -52,10 +52,12 @@
   # log
   l = log --graph --date=short
   ll = log --date=short
-  changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
+  # changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
+  changes = log --format=format:\"%C(red)%aI %C(auto)%h %C(green)%aN%Creset %si\" --stat
   short = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\"
   simple = log --pretty=format:\" * %s\"
   shortnocolor = log --pretty=format:\"%h %cr %cn %s\"
+  authors = !git log --format=\"%an\" | sort -u
 
   # pull
   pl = pull                         # pull
@@ -96,15 +98,17 @@
   svnl = svn log --oneline --show-commit
 [format]
   pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
+	pretty = fuller
+	pretty = %C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
 [mergetool]
   prompt = false
 [mergetool "mvimdiff"]
-  cmd="mvim -c 'Gdiff' $MERGED"     # use fugitive.vim for 3-way merge
+	cmd = mvim -c 'Gdiff' $MERGED
   keepbackup=false
 [merge]
   summary = true
   verbosity = 1
-  tool = mvimdiff
+	tool = mvimdiff
 [apply]
   whitespace = nowarn
 [branch]
@@ -133,3 +137,8 @@
 [user]
 	name = Michael Bamford
 	email = michael@michaelbamford.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
