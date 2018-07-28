@@ -11,11 +11,12 @@ endif
 let g:colors_name = "citylights"
 
 hi Cursor ctermfg=16 ctermbg=69 cterm=NONE guifg=#1d252c guibg=#539afc gui=NONE
-hi Visual ctermfg=NONE ctermbg=23 cterm=NONE guifg=NONE guibg=#2d3741 gui=NONE
-hi CursorLine ctermfg=NONE ctermbg=235 cterm=NONE guifg=NONE guibg=#252f38 gui=NONE
+hi Visual ctermfg=253 ctermbg=23 cterm=NONE guifg=#e4e4e4 guibg=#005f5f gui=NONE
+hi CursorLine ctermfg=NONE ctermbg=234 cterm=NONE guifg=NONE guibg=#252f38 gui=NONE
 hi CursorColumn ctermfg=NONE ctermbg=17 cterm=NONE guifg=NONE guibg=#252f38 gui=NONE
 hi ColorColumn ctermfg=NONE ctermbg=234 cterm=NONE guifg=NONE guibg=#252f38 gui=NONE
-hi LineNr ctermfg=59 ctermbg=NONE cterm=NONE guifg=#475967 guibg=#252f38 gui=NONE
+hi LineNr ctermfg=11 ctermbg=NONE cterm=NONE guifg=#475967 guibg=#252f38 gui=NONE
+hi CursorLineNr ctermfg=184 ctermbg=NONE cterm=NONE guifg=#dfdf00 guibg=#252f38 gui=NONE
 hi VertSplit ctermfg=59 ctermbg=59 cterm=NONE guifg=#35434e guibg=#35434e gui=NONE
 hi MatchParen ctermfg=81 ctermbg=NONE cterm=underline guifg=#5ec4ff guibg=NONE gui=underline
 hi StatusLine ctermfg=67 ctermbg=59 cterm=bold guifg=#718ca1 guibg=#35434e gui=bold
