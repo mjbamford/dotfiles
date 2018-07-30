@@ -114,3 +114,10 @@ hi link xmlAttrib jsClassFuncName
 hi jsClassDefinition ctermfg=172 ctermbg=NONE guifg=#df8700 guibg=NONE cterm=NONE
 hi link jsSuper jsClassDefinition
 hi jsFuncArgs ctermfg=178 ctermbg=NONE guifg=#dfaf00 guibg=NONE cterm=NONE
+hi jsModuleKeyword ctermfg=250 ctermbg=NONE guifg=#bcbcbc guibg=NONE cterm=NONE
+hi jsImport ctermfg=39 ctermbg=NONE guifg=#00afff guibg=NONE cterm=NONE
+
+hi link ShowMarksHLl jsClassDefinition
+hi link ShowMarksHLu jsClassDefinition
+hi link ShowMarksHLo jsClassDefinition
+hi link ShowMarksHLm jsClassDefinition
