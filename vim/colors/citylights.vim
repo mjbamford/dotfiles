@@ -46,7 +46,7 @@ hi Function ctermfg=80 ctermbg=NONE cterm=NONE guifg=#33ced8 guibg=NONE gui=NONE
 hi Identifier ctermfg=30 ctermbg=NONE cterm=NONE guifg=#008b94 guibg=NONE gui=NONE
 hi Keyword ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
 hi Label ctermfg=69 ctermbg=NONE cterm=NONE guifg=#539afc guibg=NONE gui=NONE
-hi NonText ctermfg=23 ctermbg=NONE cterm=NONE guifg=#2d3741 guibg=#212a32 gui=NONE
+hi NonText ctermfg=23 ctermbg=NONE cterm=NONE guifg=#2d3741 guibg=NONE gui=NONE
 hi Number ctermfg=174 ctermbg=NONE cterm=NONE guifg=#e27e8d guibg=NONE gui=NONE
 hi Operator ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
 hi PreProc ctermfg=81 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
@@ -107,15 +107,25 @@ hi cssValueLength ctermfg=174 ctermbg=NONE cterm=NONE guifg=#e27e8d guibg=NONE g
 hi cssCommonAttr ctermfg=152 ctermbg=NONE cterm=NONE guifg=#b7c5d3 guibg=NONE gui=NONE
 hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 
+hi Statement ctermfg=39 ctermbg=NONE guifg=#00afff guibg=NONE cterm=NONE
+hi Conditional ctermfg=39 ctermbg=NONE guifg=#00afff guibg=NONE cterm=NONE
+hi Keyword ctermfg=39 ctermbg=NONE guifg=#00afff guibg=NONE cterm=NONE
+hi Include ctermfg=39 ctermbg=NONE guifg=#00afff guibg=NONE cterm=NONE
 hi link xmlTag xmlEndTag
 hi link xmlTagName xmlEndTag
-hi jsThis ctermfg=195 ctermbg=NONE guifg=#dfffff guibg=NONE cterm=NONE
 hi link xmlAttrib jsClassFuncName
-hi jsClassDefinition ctermfg=172 ctermbg=NONE guifg=#df8700 guibg=NONE cterm=NONE
-hi link jsSuper jsClassDefinition
-hi jsFuncArgs ctermfg=178 ctermbg=NONE guifg=#dfaf00 guibg=NONE cterm=NONE
 hi jsModuleKeyword ctermfg=250 ctermbg=NONE guifg=#bcbcbc guibg=NONE cterm=NONE
-hi jsImport ctermfg=39 ctermbg=NONE guifg=#00afff guibg=NONE cterm=NONE
+hi jsClassKeyword ctermfg=30 ctermbg=NONE guifg=#df8700 guibg=NONE cterm=NONE
+hi jsClassDefinition ctermfg=172 ctermbg=NONE guifg=#df8700 guibg=NONE cterm=NONE
+hi jsThis ctermfg=195 ctermbg=NONE guifg=#dfffff guibg=NONE cterm=NONE
+hi jsFuncArgs ctermfg=178 ctermbg=NONE guifg=#dfaf00 guibg=NONE cterm=NONE
+hi jsNull ctermfg=124 ctermbg=NONE guifg=#af0000 guibg=NONE cterm=NONE
+hi link jsUndefined jsNull
+hi link jsSuper jsClassDefinition
+
+hi rubyClass ctermfg=30 ctermbg=NONE cterm=NONE guifg=#5ec4ff guibg=NONE gui=NONE
+hi rubyClassName ctermfg=172 ctermbg=NONE guifg=#df8700 guibg=NONE cterm=NONE
+hi rubyPseudoVariable ctermfg=124 ctermbg=NONE guifg=#af0000 guibg=NONE cterm=NONE
 
 hi link ShowMarksHLl jsClassDefinition
 hi link ShowMarksHLu jsClassDefinition
