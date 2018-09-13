@@ -1,0 +1,114 @@
+i  <S-BS>       @<Plug>delimitMateS-BS
+i  <BS>         @<Plug>delimitMateBS
+i  <Plug>delimitMateJumpMany *@<SNR>175_TriggerAbb()."\<C-R>=delimitMate#JumpMany()\<CR>"
+i  <C-G>g       @<Plug>delimitMateJumpMany
+i  <C-H>        @<Plug>delimitMateBS
+i  "            @<Plug>delimitMate"
+i  '            @<Plug>delimitMate'
+i  (            @<Plug>delimitMate(
+i  )            @<Plug>delimitMate)
+i  [            @<Plug>delimitMate[
+i  ]            @<Plug>delimitMate]
+i  `            @<Plug>delimitMate`
+i  {            @<Plug>delimitMate{
+i  }            @<Plug>delimitMate}
+i  <Plug>(neocomplete_auto_refresh) * <C-R>=neocomplete#mappings#refresh()<CR>
+i  <Plug>(neocomplete_start_manual_complete) * <C-R>=neocomplete#mappings#manual_complete()<CR>
+i  <Plug>(neocomplete_start_auto_complete) * <C-R>=neocomplete#mappings#auto_complete()<CR>
+i  <Plug>(neocomplete_start_omni_complete) * <C-X><C-O>
+i  <Plug>(neocomplete_start_unite_quick_match) * unite#sources#neocomplete#start_quick_match()
+i  <Plug>(neocomplete_start_unite_complete) * unite#sources#neocomplete#start_complete()
+i  <S-Tab>       <Plug>snipMateBack
+i  <Plug>ISurround * <C-R>=<SNR>199_insert(1)<CR>
+i  <Plug>Isurround * <C-R>=<SNR>199_insert()<CR>
+i  <Plug>ragtagXmlV * <C-R>="&#".getchar().";"<CR>
+i  <Plug>ragtagUrlV * <C-R>=<SNR>198_urlv()<CR>
+i  <Plug>ragtagXmlEncode * <C-R>=<SNR>198_togglexmlescape()<CR>
+i  <Plug>ragtagUrlEncode * <C-R>=<SNR>198_toggleurlescape()<CR>
+i  <SNR>198_ragtagXmlEncode * <C-R>=<SNR>198_togglexmlescape()<CR>
+i  <SNR>198_ragtagUrlEncode * <C-R>=<SNR>198_toggleurlescape()<CR>
+i  <Plug>ragtagBSXml * <C-R>=<SNR>198_bspattern('&#\=\w*;\|<[^><]*>\=')<CR>
+i  <Plug>ragtagBSUrl * <C-R>=<SNR>198_bspattern('%\x\x\=\|&amp;')<CR>
+i  <SNR>198_urlspace * <C-R>=<SNR>198_getinput()=~?'\%([?&]\|&amp;\)[%a-z0-9._~+-]*=[%a-z0-9._~+-]*$'?'+':'%20'<CR>
+i  <Plug>ragtagHtmlComplete * <C-R>=<SNR>198_htmlEn()<CR><C-X><C-O><C-P><C-R>=<SNR>198_htmlDis()<CR><C-N>
+i  <Plug>AlwaysEnd & <SNR>197_AlwaysEnd
+i  <Plug>DiscretionaryEnd & <SNR>197_DiscretionaryEnd
+i  <SNR>197_AlwaysEnd * <C-R>=<SNR>197_crend(1)<CR>
+i  <SNR>197_DiscretionaryEnd * <C-R>=<SNR>197_crend(0)<CR>
+i  <SNR>194_yrrecord * <C-R>=YRRecord3()<CR>
+i  <SNR>194_YRGetChar & <C-R>=YRGetChar()<CR>
+i  <Plug>TComment_<C-_>9 * <C-\><C-O>:call tcomment#SetOption("count", 9)<CR>
+i  <Plug>TComment_<C-_>8 * <C-\><C-O>:call tcomment#SetOption("count", 8)<CR>
+i  <Plug>TComment_<C-_>7 * <C-\><C-O>:call tcomment#SetOption("count", 7)<CR>
+i  <Plug>TComment_<C-_>6 * <C-\><C-O>:call tcomment#SetOption("count", 6)<CR>
+i  <Plug>TComment_<C-_>5 * <C-\><C-O>:call tcomment#SetOption("count", 5)<CR>
+i  <Plug>TComment_<C-_>4 * <C-\><C-O>:call tcomment#SetOption("count", 4)<CR>
+i  <Plug>TComment_<C-_>3 * <C-\><C-O>:call tcomment#SetOption("count", 3)<CR>
+i  <Plug>TComment_<C-_>2 * <C-\><C-O>:call tcomment#SetOption("count", 2)<CR>
+i  <Plug>TComment_<C-_>1 * <C-\><C-O>:call tcomment#SetOption("count", 1)<CR>
+i  <Plug>TComment_<C-_>s * <C-O>:TCommentAs <C-R>=&ft<CR>_
+i  <Plug>TComment_<C-_>n * <C-O>:TCommentAs <C-R>=&ft<CR><Space>
+i  <Plug>TComment_<C-_>a * <C-O>:TCommentAs<Space>
+i  <Plug>TComment_<C-_>b * <C-\><C-O>:TCommentBlock mode=#<CR>
+i  <Plug>TComment_<C-_>i * <C-\><C-O>v:TCommentInline mode=#<CR>
+i  <Plug>TComment_<C-_>r * <C-O>:TCommentRight<CR>
+i  <Plug>TComment_<C-_><Space> * <C-O>:TComment<Space>
+i  <Plug>TComment_<C-_>p * <C-O>:norm! m`vip<CR>:TComment<CR><C-O>``
+i  <Plug>TComment_<C-_><C-_> * <C-O>:TComment<CR>
+i  <Plug>delimitMateS-Tab * <SNR>175_TriggerAbb()."\<C-R>=delimitMate#JumpAny()\<CR>"
+i  <Plug>delimitMateSpace * <SNR>175_TriggerAbb()."\<C-R>=delimitMate#ExpandSpace()\<CR>"
+i  <Plug>delimitMateCR * <SNR>175_TriggerAbb()."\<C-R>=delimitMate#ExpandReturn()\<CR>"
+i  <Plug>delimitMateS-BS * delimitMate#WithinEmptyPair() ? "\<Del>" : "\<S-BS>"
+i  <Plug>delimitMateBS * <C-R>=delimitMate#BS()<CR>
+i  <Plug>delimitMate` * <SNR>175_TriggerAbb()."<C-R>=delimitMate#QuoteDelim(\"\\\`\")<CR>"
+i  <Plug>delimitMate' * <SNR>175_TriggerAbb()."<C-R>=delimitMate#QuoteDelim(\"\\\'\")<CR>"
+i  <Plug>delimitMate" * <SNR>175_TriggerAbb()."<C-R>=delimitMate#QuoteDelim(\"\\\"\")<CR>"
+i  <Plug>delimitMate] * <SNR>175_TriggerAbb().delimitMate#JumpOut("\]")
+i  <Plug>delimitMate} * <SNR>175_TriggerAbb().delimitMate#JumpOut("\}")
+i  <Plug>delimitMate) * <SNR>175_TriggerAbb().delimitMate#JumpOut("\)")
+i  <Plug>delimitMate[ * <SNR>175_TriggerAbb().delimitMate#ParenDelim("]")
+i  <Plug>delimitMate{ * <SNR>175_TriggerAbb().delimitMate#ParenDelim("}")
+i  <Plug>delimitMate( * <SNR>175_TriggerAbb().delimitMate#ParenDelim(")")
+i  <Plug>(indexed-search-after)   <Nop>
+i  <Plug>snipMateShow * <C-R>=snipMate#ShowAvailableSnips()<CR>
+i  <Plug>snipMateBack * <C-R>=snipMate#BackwardsSnippet()<CR>
+i  <Plug>snipMateTrigger * <C-R>=snipMate#TriggerSnippet(1)<CR>
+i  <Plug>snipMateNextOrTrigger * <C-R>=snipMate#TriggerSnippet()<CR>
+i  <D-/>         <Esc>:TComment<CR>i
+i  <D-D>         -
+i  <D-K>         -
+i  <D-d>         _
+i  <D-k>         _
+i  <C-Space>   * <C-N>
+i  <C-A>         <Esc>wa
+i  <C-G>S        <Plug>ISurround
+i  <C-G>s        <Plug>Isurround
+i  <Tab>         <Plug>snipMateNextOrTrigger
+i  <NL>          <%  %><Esc>2hi
+i  <C-K>         <%=   %><Esc>3hi
+i  <C-L>         <Space>=><Space>
+i  <CR>          <Plug>delimitMateCR<Plug>DiscretionaryEnd
+i  <C-R><Tab>    <Plug>snipMateShow
+i  <C-S>         <Plug>Isurround
+i  <C-X><CR>     <Plug>delimitMateCR<Plug>AlwaysEnd
+i  <Esc><Esc>  * <Esc>:w<CR>
+i  <C-_>9        <Plug>TComment_<C-_>9
+i  <C-_>8        <Plug>TComment_<C-_>8
+i  <C-_>7        <Plug>TComment_<C-_>7
+i  <C-_>6        <Plug>TComment_<C-_>6
+i  <C-_>5        <Plug>TComment_<C-_>5
+i  <C-_>4        <Plug>TComment_<C-_>4
+i  <C-_>3        <Plug>TComment_<C-_>3
+i  <C-_>2        <Plug>TComment_<C-_>2
+i  <C-_>1        <Plug>TComment_<C-_>1
+i  <C-_>s        <Plug>TComment_<C-_>s
+i  <C-_>n        <Plug>TComment_<C-_>n
+i  <C-_>a        <Plug>TComment_<C-_>a
+i  <C-_>b        <Plug>TComment_<C-_>b
+i  <C-_>i        <Plug>TComment_<C-_>i
+i  <C-_>r        <Plug>TComment_<C-_>r
+i  <C-_><Space>   <Plug>TComment_<C-_><Space>
+i  <C-_>p        <Plug>TComment_<C-_>p
+i  <C-_><C-_>    <Plug>TComment_<C-_><C-_>
+i  jk          * <Esc>
+

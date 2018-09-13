@@ -1,0 +1,503 @@
+   <D-j>        @{
+   <D-k>        @}
+x  <Tab>         <Plug>snipMateVisual
+s  <Tab>         <Plug>snipMateNextOrTrigger
+   <Esc>9      * 9gt
+   <Esc>8      * 8gt
+   <Esc>7      * 7gt
+   <Esc>6      * 6gt
+   <Esc>5      * 5gt
+   <Esc>4      * 4gt
+   <Esc>3      * 3gt
+   <Esc>2      * 2gt
+   <Esc>1      * 1gt
+v  <C-_>9        <Plug>TComment_<C-_>9
+v  <C-_>8        <Plug>TComment_<C-_>8
+v  <C-_>7        <Plug>TComment_<C-_>7
+v  <C-_>6        <Plug>TComment_<C-_>6
+v  <C-_>5        <Plug>TComment_<C-_>5
+v  <C-_>4        <Plug>TComment_<C-_>4
+v  <C-_>3        <Plug>TComment_<C-_>3
+v  <C-_>2        <Plug>TComment_<C-_>2
+v  <C-_>1        <Plug>TComment_<C-_>1
+   <C-_>ca       <Plug>TComment_<C-_>ca
+   <C-_>cc       <Plug>TComment_<C-_>cc
+   <C-_>s        <Plug>TComment_<C-_>s
+   <C-_>n        <Plug>TComment_<C-_>n
+   <C-_>a        <Plug>TComment_<C-_>a
+   <C-_>b        <Plug>TComment_<C-_>b
+   <C-_>i        <Plug>TComment_<C-_>i
+   <C-_>r        <Plug>TComment_<C-_>r
+   <C-_><Space>   <Plug>TComment_<C-_><Space>
+   <C-_>p        <Plug>TComment_<C-_>p
+v  <C-_><C-_>    <Plug>TComment_<C-_><C-_>
+x  #           * :<C-U>call <SNR>142_VSetSearch('?')<CR>?<C-R>=@/<CR><CR>
+nos#             <SNR>141_star('#')  . "\<Plug>(indexed-search-after)"
+v  %           * :<C-U>call <SNR>187_Match_wrapper('',1,'v') <CR>m'gv``
+x  *           * :<C-U>call <SNR>142_VSetSearch('/')<CR>/<C-R>=@/<CR><CR>
+nos*             <SNR>141_star('*')  . "\<Plug>(indexed-search-after)"
+   ,rwp          <Plug>RestoreWinPosn
+   ,swp          <Plug>SaveWinPosn
+x  ,Nr           <Plug>NrrwrgnBangDo
+x  ,nr           <Plug>NrrwrgnDo
+x  ,mc         * :<C-U>call multiple_cursors#new("v")<CR>
+   ,_s           <Plug>TComment_,_s
+   ,_n           <Plug>TComment_,_n
+   ,_a           <Plug>TComment_,_a
+   ,_b           <Plug>TComment_,_b
+   ,_r           <Plug>TComment_,_r
+x  ,_i           <Plug>TComment_,_i
+   ,_<Space>     <Plug>TComment_,_<Space>
+   ,_p           <Plug>TComment_,_p
+x  ,__           <Plug>TComment_,__
+nos,__           <Plug>TComment_,__
+   ,,            <Plug>(easymotion-prefix)
+v  ,*            :<C-U>call <SNR>142_VSetSearch()<CR>:execute 'noautocmd vimgrep /' . @/ . '/ **'<CR>
+   ,mm           :ShowMarksPlaceMark<CR>
+   ,ma           :ShowMarksClearAll<CR>
+   ,mh           :ShowMarksClearMark<CR>
+   ,mo           :ShowMarksOn<CR>
+   ,mt           :ShowMarksToggle<CR>
+   ,hu           :call HtmlUnEscape()<CR>
+   ,he           :call HtmlEscape()<CR>
+v  ,rem        * :RExtractMethod<CR>
+v  ,rriv       * :RRenameInstanceVariable<CR>
+v  ,rrlv       * :RRenameLocalVariable<CR>
+v  ,relv       * :RExtractLocalVariable<CR>
+v  ,rec        * :RExtractConstant<CR>
+   ,hp           :!open -a Safari %<CR><CR>
+   ,hi           :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
+   ,hl         * :set hlsearch! hlsearch?<CR>
+   ,gz           <C-W>o
+   ,`            ysiw`
+v  ,{            c{<C-R>"}<Esc>
+v  ,}            c{ <C-R>" }<Esc>
+v  ,]            c[<C-R>"]<Esc>
+v  ,[            c[ <C-R>" ]<Esc>
+v  ,)            c(<C-R>")<Esc>
+v  ,(            c( <C-R>" )<Esc>
+v  ,'            c'<C-R>"'<Esc>
+v  ,"            c"<C-R>""<Esc>
+v  ,#            c#{<C-R>"}<Esc>
+v  ,gt           :!tidy -q -i --show-errors 0<CR>
+v  ,k          * :<C-U>execute "Ag " . GetVisual()<CR>
+   ,jT           :CtrlP test<CR>
+   ,jF           :CtrlP factories<CR>
+   ,jV           :CtrlP vendor<CR>
+   ,jC           :CtrlP config<CR>
+   ,jd           :CtrlP db<CR>
+   ,jf           :CtrlP fast_spec<CR>
+   ,js           :CtrlP spec<CR>
+   ,jp           :CtrlP public<CR>
+   ,jl           :CtrlP lib<CR>
+   ,jh           :CtrlP app/helpers<CR>
+   ,jj           :CtrlP app/assets/javascripts<CR>
+   ,jv           :CtrlP app/views<CR>
+   ,jc           :CtrlP app/controllers<CR>
+   ,jm           :CtrlP app/models<CR>
+   ,ja           :CtrlP app/assets<CR>
+   ,t            <Plug>(ctrlp)
+x  ;             <Plug>Sneak_;
+x  @(targets)  * :<C-U>call targets#do()<CR>
+x  A             targets#e('A', 'A')
+nx B             <Plug>CamelCaseMotion_b
+nx E             <Plug>CamelCaseMotion_e
+x  I             targets#e('I', 'I')
+   N             <SNR>141_n('N')     . "\<Plug>(indexed-search-after)"
+x  P           * :<C-U>YRPaste 'P', 'v'<CR>
+x  S             <Plug>VSurround
+nx W             <Plug>CamelCaseMotion_w
+x  Z             <Plug>Sneak_S
+x  [x            <Plug>unimpaired_xml_encode
+x  [u            <Plug>unimpaired_url_encode
+x  [y            <Plug>unimpaired_string_encode
+x  [e            <Plug>unimpairedMoveSelectionUp
+v  [%            <Esc>[%m'gv``
+   \sm         & m
+x  ]x            <Plug>unimpaired_xml_decode
+x  ]u            <Plug>unimpaired_url_decode
+x  ]y            <Plug>unimpaired_string_decode
+x  ]e            <Plug>unimpairedMoveSelectionDown
+v  ]%            <Esc>]%m'gv``
+v  a%            <Esc>[%v]%
+x  a             targets#e('a', 'a')
+x  ar            <Plug>(textobj-rubyblock-a)
+x  a_            <Plug>(textobj-underscore-a)
+x  aF            <Plug>(textobj-function-A)
+x  af            <Plug>(textobj-function-a)
+x  ae            <Plug>(textobj-entire-a)
+x  adz           <Plug>(textobj-datetime-tz)
+x  ada           <Plug>(textobj-datetime-auto)
+x  adt           <Plug>(textobj-datetime-time)
+x  add           <Plug>(textobj-datetime-date)
+x  adf           <Plug>(textobj-datetime-full)
+x  aC          * :<C-U>call TextObjWordBasedColumn("aW")<CR>
+x  ac          * :<C-U>call TextObjWordBasedColumn("aw")<CR>
+x  a:            <Plug>(textobj-rubysymbol-a)
+v  ai          * :<C-U>call IndentTextObject(0)<CR><Esc>gv
+x  al          * :<C-U>call <SNR>51_NextTextObject('a', '?')<CR>
+x  an          * :<C-U>call <SNR>51_NextTextObject('a', '/')<CR>
+x  d           * :YRDeleteRange 'v'<CR>
+v  gx            <Plug>NetrwBrowseXVis
+x  gS            <Plug>VgSurround
+v  gK          * :call investigate#Investigate('v')<CR>
+v  g%          * :<C-U>call <SNR>187_Match_wrapper('',0,'v') <CR>m'gv``
+x  g>            <Plug>TComment_Comment
+x  g<            <Plug>TComment_Uncomment
+x  gc            <Plug>TComment_gc
+   g#            <SNR>141_star('g#') . "\<Plug>(indexed-search-after)"
+   g*            <SNR>141_star('g*') . "\<Plug>(indexed-search-after)"
+x  i,e           <Plug>CamelCaseMotion_ie
+x  i,b           <Plug>CamelCaseMotion_ib
+x  i,w           <Plug>CamelCaseMotion_iw
+x  i             targets#e('i', 'i')
+x  ir            <Plug>(textobj-rubyblock-i)
+x  i_            <Plug>(textobj-underscore-i)
+x  if            <Plug>(textobj-function-i)
+x  iF            <Plug>(textobj-function-I)
+x  ie            <Plug>(textobj-entire-i)
+x  idz           <Plug>(textobj-datetime-tz)
+x  ida           <Plug>(textobj-datetime-auto)
+x  idt           <Plug>(textobj-datetime-time)
+x  idd           <Plug>(textobj-datetime-date)
+x  idf           <Plug>(textobj-datetime-full)
+x  iC          * :<C-U>call TextObjWordBasedColumn("iW")<CR>
+v  ic            <Plug>TComment_ic
+x  i:            <Plug>(textobj-rubysymbol-i)
+v  ii          * :<C-U>call IndentTextObject(1)<CR><Esc>gv
+x  il          * :<C-U>call <SNR>51_NextTextObject('i', '?')<CR>
+x  in          * :<C-U>call <SNR>51_NextTextObject('i', '/')<CR>
+   m           * :exe 'norm \sm'.nr2char(getchar())|call <SNR>125_ShowMarks()<CR>
+   n             <SNR>141_n('n')     . "\<Plug>(indexed-search-after)"
+x  p           * :<C-U>YRPaste 'p', 'v'<CR>
+x  s             <Plug>Sneak_s
+x  x           * :YRDeleteRange 'v'<CR>
+x  y           * :YRYankRange 'v'<CR>
+s  <S-Tab>       <Plug>snipMateBack
+v  <Plug>NetrwBrowseXVis * :<C-U>call netrw#BrowseXVis()<CR>
+x  <Plug>GitGutterTextObjectOuterVisual * :<C-U>call gitgutter#hunk#text_object(0)<CR>
+x  <Plug>GitGutterTextObjectInnerVisual * :<C-U>call gitgutter#hunk#text_object(1)<CR>
+x  <Plug>unimpaired_xml_decode * <SNR>200_TransformSetup("xml_decode")
+x  <Plug>unimpaired_xml_encode * <SNR>200_TransformSetup("xml_encode")
+x  <Plug>unimpaired_url_decode * <SNR>200_TransformSetup("url_decode")
+x  <Plug>unimpaired_url_encode * <SNR>200_TransformSetup("url_encode")
+x  <Plug>unimpaired_string_decode * <SNR>200_TransformSetup("string_decode")
+x  <Plug>unimpaired_string_encode * <SNR>200_TransformSetup("string_encode")
+   <Plug>unimpairedMoveSelectionDown * :<C-U>call <SNR>200_MoveSelectionDown(v:count1)<CR>
+   <Plug>unimpairedMoveSelectionUp * :<C-U>call <SNR>200_MoveSelectionUp(v:count1)<CR>
+v  <Plug>VgSurround * :<C-U>call <SNR>199_opfunc(visualmode(),visualmode() ==# 'V' ? 0 : 1)<CR>
+v  <Plug>VSurround * :<C-U>call <SNR>199_opfunc(visualmode(),visualmode() ==# 'V' ? 1 : 0)<CR>
+x  <SNR>190_VisualNrrwBang * :<C-U>call nrrwrgn#NrrwRgn(visualmode(),'!')<CR>
+x  <SNR>190_VisualNrrwRgn * :<C-U>call nrrwrgn#NrrwRgn(visualmode(),'')<CR>
+x  <Plug>NrrwrgnBangDo & <SNR>190_VisualNrrwBang
+x  <Plug>NrrwrgnDo & <SNR>190_VisualNrrwRgn
+v  <Plug>CamelCaseMotion_ie * :<C-U>call camelcasemotion#InnerMotion('e',v:count1)<CR>
+v  <Plug>CamelCaseMotion_ib * :<C-U>call camelcasemotion#InnerMotion('b',v:count1)<CR>
+v  <Plug>CamelCaseMotion_iw * :<C-U>call camelcasemotion#InnerMotion('w',v:count1)<CR>
+v  <Plug>CamelCaseMotion_e * :<C-U>call camelcasemotion#Motion('e',v:count1,'v')<CR>
+v  <Plug>CamelCaseMotion_b * :<C-U>call camelcasemotion#Motion('b',v:count1,'v')<CR>
+v  <Plug>CamelCaseMotion_w * :<C-U>call camelcasemotion#Motion('w',v:count1,'v')<CR>
+v  <Plug>TComment_<C-_>9 * :call tcomment#SetOption("count", 9)<CR>
+v  <Plug>TComment_<C-_>8 * :call tcomment#SetOption("count", 8)<CR>
+v  <Plug>TComment_<C-_>7 * :call tcomment#SetOption("count", 7)<CR>
+v  <Plug>TComment_<C-_>6 * :call tcomment#SetOption("count", 6)<CR>
+v  <Plug>TComment_<C-_>5 * :call tcomment#SetOption("count", 5)<CR>
+v  <Plug>TComment_<C-_>4 * :call tcomment#SetOption("count", 4)<CR>
+v  <Plug>TComment_<C-_>3 * :call tcomment#SetOption("count", 3)<CR>
+v  <Plug>TComment_<C-_>2 * :call tcomment#SetOption("count", 2)<CR>
+v  <Plug>TComment_<C-_>1 * :call tcomment#SetOption("count", 1)<CR>
+x  <Plug>TComment_gc * :TCommentMaybeInline<CR>
+   <Plug>TComment_ic * :<C-U>call tcomment#textobject#InlineComment()<CR>
+x  <Plug>TComment_Comment * :<C-U>if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | '<,'>TCommentMaybeInline!<CR>
+x  <Plug>TComment_Uncomment * :<C-U>if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | call tcomment#SetOption("mode_extra", "U") | '<,'>TCommentMaybeInline<CR>
+   <Plug>TComment_,_s * :TCommentAs <C-R>=&ft<CR>_
+   <Plug>TComment_,_n * :TCommentAs <C-R>=&ft<CR><Space>
+   <Plug>TComment_,_a * :TCommentAs<Space>
+   <Plug>TComment_,_b * :TCommentBlock<CR>
+   <Plug>TComment_,_r * :TCommentRight<CR>
+x  <Plug>TComment_,_i * :TCommentInline<CR>
+   <Plug>TComment_,_<Space> * :TComment<Space>
+   <Plug>TComment_,_p * vip:TComment<CR>
+x  <Plug>TComment_,__ * :TCommentMaybeInline<CR>
+nos<Plug>TComment_,__ * :TComment<CR>
+   <Plug>TComment_<C-_>ca * :<C-U>call tcomment#SetOption("as", input("Comment as: ", &filetype, "customlist,tcomment#complete#Complete"))<CR>
+   <Plug>TComment_<C-_>cc * :<C-U>call tcomment#SetOption("count", v:count1)<CR>
+   <Plug>TComment_<C-_>s * :TCommentAs <C-R>=&ft<CR>_
+   <Plug>TComment_<C-_>n * :TCommentAs <C-R>=&ft<CR><Space>
+   <Plug>TComment_<C-_>a * :TCommentAs<Space>
+   <Plug>TComment_<C-_>b * :TCommentBlock<CR>
+   <Plug>TComment_<C-_>i * v:TCommentInline mode=I#<CR>
+   <Plug>TComment_<C-_>r * :TCommentRight<CR>
+   <Plug>TComment_<C-_><Space> * :TComment<Space>
+   <Plug>TComment_<C-_>p * m`vip:TComment<CR>``
+v  <Plug>TComment_<C-_><C-_> * :TCommentMaybeInline<CR>
+   <Plug>NERDTreeFocusToggle & :call <SNR>162_NERDTreeFocusToggle()
+   <Plug>NERDTreeSteppedClose & :call <SNR>162_NERDTreeSteppedClose()
+   <Plug>NERDTreeSteppedOpen & :call <SNR>162_NERDTreeSteppedOpen()
+   <Plug>NERDTreeMirrorToggle & :call <SNR>162_NERDTreeMirrorToggle()
+   <Plug>NERDTreeMirrorOpen & :call <SNR>162_NERDTreeMirrorOrCreate()
+   <Plug>NERDTreeTabsFind & :call <SNR>162_NERDTreeFindFile()
+   <Plug>NERDTreeTabsToggle & :call <SNR>162_NERDTreeToggleAllTabs()
+   <Plug>NERDTreeTabsClose & :call <SNR>162_NERDTreeCloseAllTabs()
+   <Plug>NERDTreeTabsOpen & :call <SNR>162_NERDTreeOpenAllTabs()
+   <Plug>(easymotion-prefix)N   <Plug>(easymotion-N)
+   <Plug>(easymotion-prefix)n   <Plug>(easymotion-n)
+   <Plug>(easymotion-prefix)k   <Plug>(easymotion-k)
+   <Plug>(easymotion-prefix)j   <Plug>(easymotion-j)
+   <Plug>(easymotion-prefix)gE   <Plug>(easymotion-gE)
+   <Plug>(easymotion-prefix)ge   <Plug>(easymotion-ge)
+   <Plug>(easymotion-prefix)E   <Plug>(easymotion-E)
+   <Plug>(easymotion-prefix)e   <Plug>(easymotion-e)
+   <Plug>(easymotion-prefix)B   <Plug>(easymotion-B)
+   <Plug>(easymotion-prefix)b   <Plug>(easymotion-b)
+   <Plug>(easymotion-prefix)W   <Plug>(easymotion-W)
+   <Plug>(easymotion-prefix)w   <Plug>(easymotion-w)
+   <Plug>(easymotion-prefix)T   <Plug>(easymotion-T)
+   <Plug>(easymotion-prefix)t   <Plug>(easymotion-t)
+   <Plug>(easymotion-prefix)s   <Plug>(easymotion-s)
+   <Plug>(easymotion-prefix)F   <Plug>(easymotion-F)
+   <Plug>(easymotion-prefix)f   <Plug>(easymotion-f)
+x  <Plug>(easymotion-activate) * :<C-U>call EasyMotion#activate(1)<CR>
+nos<Plug>(easymotion-activate) * :<C-U>call EasyMotion#activate(0)<CR>
+   <Plug>(easymotion-dotrepeat) * :<C-U>call EasyMotion#DotRepeat()<CR>
+x  <Plug>(easymotion-repeat) * <Esc>:<C-U>call EasyMotion#Repeat(1)<CR>
+nos<Plug>(easymotion-repeat) * :<C-U>call EasyMotion#Repeat(0)<CR>
+x  <Plug>(easymotion-prev) * :<C-U>call EasyMotion#NextPrevious(1,1)<CR>
+nos<Plug>(easymotion-prev) * :<C-U>call EasyMotion#NextPrevious(0,1)<CR>
+x  <Plug>(easymotion-next) * :<C-U>call EasyMotion#NextPrevious(1,0)<CR>
+nos<Plug>(easymotion-next) * :<C-U>call EasyMotion#NextPrevious(0,0)<CR>
+x  <Plug>(easymotion-wl) * <Esc>:<C-U>call EasyMotion#WBL(1,0)<CR>
+nos<Plug>(easymotion-wl) * :<C-U>call EasyMotion#WBL(0,0)<CR>
+x  <Plug>(easymotion-lineforward) * <Esc>:<C-U>call EasyMotion#LineAnywhere(1,0)<CR>
+nos<Plug>(easymotion-lineforward) * :<C-U>call EasyMotion#LineAnywhere(0,0)<CR>
+x  <Plug>(easymotion-lineanywhere) * <Esc>:<C-U>call EasyMotion#LineAnywhere(1,2)<CR>
+nos<Plug>(easymotion-lineanywhere) * :<C-U>call EasyMotion#LineAnywhere(0,2)<CR>
+x  <Plug>(easymotion-bd-wl) * <Esc>:<C-U>call EasyMotion#WBL(1,2)<CR>
+nos<Plug>(easymotion-bd-wl) * :<C-U>call EasyMotion#WBL(0,2)<CR>
+x  <Plug>(easymotion-linebackward) * <Esc>:<C-U>call EasyMotion#LineAnywhere(1,1)<CR>
+nos<Plug>(easymotion-linebackward) * :<C-U>call EasyMotion#LineAnywhere(0,1)<CR>
+x  <Plug>(easymotion-bl) * <Esc>:<C-U>call EasyMotion#WBL(1,1)<CR>
+nos<Plug>(easymotion-bl) * :<C-U>call EasyMotion#WBL(0,1)<CR>
+x  <Plug>(easymotion-el) * <Esc>:<C-U>call EasyMotion#EL(1,0)<CR>
+nos<Plug>(easymotion-el) * :<C-U>call EasyMotion#EL(0,0)<CR>
+x  <Plug>(easymotion-gel) * <Esc>:<C-U>call EasyMotion#EL(1,1)<CR>
+nos<Plug>(easymotion-gel) * :<C-U>call EasyMotion#EL(0,1)<CR>
+x  <Plug>(easymotion-bd-el) * <Esc>:<C-U>call EasyMotion#EL(1,2)<CR>
+nos<Plug>(easymotion-bd-el) * :<C-U>call EasyMotion#EL(0,2)<CR>
+x  <Plug>(easymotion-jumptoanywhere) * <Esc>:<C-U>call EasyMotion#JumpToAnywhere(1,2)<CR>
+nos<Plug>(easymotion-jumptoanywhere) * :<C-U>call EasyMotion#JumpToAnywhere(0,2)<CR>
+x  <Plug>(easymotion-vim-n) * <Esc>:<C-U>call EasyMotion#Search(1,0,1)<CR>
+nos<Plug>(easymotion-vim-n) * :<C-U>call EasyMotion#Search(0,0,1)<CR>
+x  <Plug>(easymotion-n) * <Esc>:<C-U>call EasyMotion#Search(1,0,0)<CR>
+nos<Plug>(easymotion-n) * :<C-U>call EasyMotion#Search(0,0,0)<CR>
+x  <Plug>(easymotion-bd-n) * <Esc>:<C-U>call EasyMotion#Search(1,2,0)<CR>
+nos<Plug>(easymotion-bd-n) * :<C-U>call EasyMotion#Search(0,2,0)<CR>
+x  <Plug>(easymotion-vim-N) * <Esc>:<C-U>call EasyMotion#Search(1,1,1)<CR>
+nos<Plug>(easymotion-vim-N) * :<C-U>call EasyMotion#Search(0,1,1)<CR>
+x  <Plug>(easymotion-N) * <Esc>:<C-U>call EasyMotion#Search(1,1,0)<CR>
+nos<Plug>(easymotion-N) * :<C-U>call EasyMotion#Search(0,1,0)<CR>
+x  <Plug>(easymotion-eol-j) * <Esc>:<C-U>call EasyMotion#Eol(1,0)<CR>
+nos<Plug>(easymotion-eol-j) * :<C-U>call EasyMotion#Eol(0,0)<CR>
+x  <Plug>(easymotion-sol-k) * <Esc>:<C-U>call EasyMotion#Sol(1,1)<CR>
+nos<Plug>(easymotion-sol-k) * :<C-U>call EasyMotion#Sol(0,1)<CR>
+x  <Plug>(easymotion-sol-j) * <Esc>:<C-U>call EasyMotion#Sol(1,0)<CR>
+nos<Plug>(easymotion-sol-j) * :<C-U>call EasyMotion#Sol(0,0)<CR>
+x  <Plug>(easymotion-k) * <Esc>:<C-U>call EasyMotion#JK(1,1)<CR>
+nos<Plug>(easymotion-k) * :<C-U>call EasyMotion#JK(0,1)<CR>
+x  <Plug>(easymotion-j) * <Esc>:<C-U>call EasyMotion#JK(1,0)<CR>
+nos<Plug>(easymotion-j) * :<C-U>call EasyMotion#JK(0,0)<CR>
+x  <Plug>(easymotion-bd-jk) * <Esc>:<C-U>call EasyMotion#JK(1,2)<CR>
+nos<Plug>(easymotion-bd-jk) * :<C-U>call EasyMotion#JK(0,2)<CR>
+x  <Plug>(easymotion-eol-bd-jk) * <Esc>:<C-U>call EasyMotion#Eol(1,2)<CR>
+nos<Plug>(easymotion-eol-bd-jk) * :<C-U>call EasyMotion#Eol(0,2)<CR>
+x  <Plug>(easymotion-sol-bd-jk) * <Esc>:<C-U>call EasyMotion#Sol(1,2)<CR>
+nos<Plug>(easymotion-sol-bd-jk) * :<C-U>call EasyMotion#Sol(0,2)<CR>
+x  <Plug>(easymotion-eol-k) * <Esc>:<C-U>call EasyMotion#Eol(1,1)<CR>
+nos<Plug>(easymotion-eol-k) * :<C-U>call EasyMotion#Eol(0,1)<CR>
+x  <Plug>(easymotion-iskeyword-ge) * <Esc>:<C-U>call EasyMotion#EK(1,1)<CR>
+nos<Plug>(easymotion-iskeyword-ge) * :<C-U>call EasyMotion#EK(0,1)<CR>
+x  <Plug>(easymotion-w) * <Esc>:<C-U>call EasyMotion#WB(1,0)<CR>
+nos<Plug>(easymotion-w) * :<C-U>call EasyMotion#WB(0,0)<CR>
+x  <Plug>(easymotion-bd-W) * <Esc>:<C-U>call EasyMotion#WBW(1,2)<CR>
+nos<Plug>(easymotion-bd-W) * :<C-U>call EasyMotion#WBW(0,2)<CR>
+x  <Plug>(easymotion-iskeyword-w) * <Esc>:<C-U>call EasyMotion#WBK(1,0)<CR>
+nos<Plug>(easymotion-iskeyword-w) * :<C-U>call EasyMotion#WBK(0,0)<CR>
+x  <Plug>(easymotion-gE) * <Esc>:<C-U>call EasyMotion#EW(1,1)<CR>
+nos<Plug>(easymotion-gE) * :<C-U>call EasyMotion#EW(0,1)<CR>
+x  <Plug>(easymotion-e) * <Esc>:<C-U>call EasyMotion#E(1,0)<CR>
+nos<Plug>(easymotion-e) * :<C-U>call EasyMotion#E(0,0)<CR>
+x  <Plug>(easymotion-bd-E) * <Esc>:<C-U>call EasyMotion#EW(1,2)<CR>
+nos<Plug>(easymotion-bd-E) * :<C-U>call EasyMotion#EW(0,2)<CR>
+x  <Plug>(easymotion-iskeyword-e) * <Esc>:<C-U>call EasyMotion#EK(1,0)<CR>
+nos<Plug>(easymotion-iskeyword-e) * :<C-U>call EasyMotion#EK(0,0)<CR>
+x  <Plug>(easymotion-b) * <Esc>:<C-U>call EasyMotion#WB(1,1)<CR>
+nos<Plug>(easymotion-b) * :<C-U>call EasyMotion#WB(0,1)<CR>
+x  <Plug>(easymotion-iskeyword-b) * <Esc>:<C-U>call EasyMotion#WBK(1,1)<CR>
+nos<Plug>(easymotion-iskeyword-b) * :<C-U>call EasyMotion#WBK(0,1)<CR>
+x  <Plug>(easymotion-iskeyword-bd-w) * <Esc>:<C-U>call EasyMotion#WBK(1,2)<CR>
+nos<Plug>(easymotion-iskeyword-bd-w) * :<C-U>call EasyMotion#WBK(0,2)<CR>
+x  <Plug>(easymotion-W) * <Esc>:<C-U>call EasyMotion#WBW(1,0)<CR>
+nos<Plug>(easymotion-W) * :<C-U>call EasyMotion#WBW(0,0)<CR>
+x  <Plug>(easymotion-bd-w) * <Esc>:<C-U>call EasyMotion#WB(1,2)<CR>
+nos<Plug>(easymotion-bd-w) * :<C-U>call EasyMotion#WB(0,2)<CR>
+x  <Plug>(easymotion-iskeyword-bd-e) * <Esc>:<C-U>call EasyMotion#EK(1,2)<CR>
+nos<Plug>(easymotion-iskeyword-bd-e) * :<C-U>call EasyMotion#EK(0,2)<CR>
+x  <Plug>(easymotion-ge) * <Esc>:<C-U>call EasyMotion#E(1,1)<CR>
+nos<Plug>(easymotion-ge) * :<C-U>call EasyMotion#E(0,1)<CR>
+x  <Plug>(easymotion-E) * <Esc>:<C-U>call EasyMotion#EW(1,0)<CR>
+nos<Plug>(easymotion-E) * :<C-U>call EasyMotion#EW(0,0)<CR>
+x  <Plug>(easymotion-bd-e) * <Esc>:<C-U>call EasyMotion#E(1,2)<CR>
+nos<Plug>(easymotion-bd-e) * :<C-U>call EasyMotion#E(0,2)<CR>
+x  <Plug>(easymotion-B) * <Esc>:<C-U>call EasyMotion#WBW(1,1)<CR>
+nos<Plug>(easymotion-B) * :<C-U>call EasyMotion#WBW(0,1)<CR>
+x  <Plug>(easymotion-Tln) * <Esc>:<C-U>call EasyMotion#TL(-1,1,1)<CR>
+nos<Plug>(easymotion-Tln) * :<C-U>call EasyMotion#TL(-1,0,1)<CR>
+x  <Plug>(easymotion-t2) * <Esc>:<C-U>call EasyMotion#T(2,1,0)<CR>
+nos<Plug>(easymotion-t2) * :<C-U>call EasyMotion#T(2,0,0)<CR>
+x  <Plug>(easymotion-t) * <Esc>:<C-U>call EasyMotion#T(1,1,0)<CR>
+nos<Plug>(easymotion-t) * :<C-U>call EasyMotion#T(1,0,0)<CR>
+x  <Plug>(easymotion-s) * <Esc>:<C-U>call EasyMotion#S(1,1,2)<CR>
+nos<Plug>(easymotion-s) * :<C-U>call EasyMotion#S(1,0,2)<CR>
+x  <Plug>(easymotion-tn) * <Esc>:<C-U>call EasyMotion#T(-1,1,0)<CR>
+nos<Plug>(easymotion-tn) * :<C-U>call EasyMotion#T(-1,0,0)<CR>
+x  <Plug>(easymotion-bd-t2) * <Esc>:<C-U>call EasyMotion#T(2,1,2)<CR>
+nos<Plug>(easymotion-bd-t2) * :<C-U>call EasyMotion#T(2,0,2)<CR>
+x  <Plug>(easymotion-tl) * <Esc>:<C-U>call EasyMotion#TL(1,1,0)<CR>
+nos<Plug>(easymotion-tl) * :<C-U>call EasyMotion#TL(1,0,0)<CR>
+x  <Plug>(easymotion-bd-tn) * <Esc>:<C-U>call EasyMotion#T(-1,1,2)<CR>
+nos<Plug>(easymotion-bd-tn) * :<C-U>call EasyMotion#T(-1,0,2)<CR>
+x  <Plug>(easymotion-fn) * <Esc>:<C-U>call EasyMotion#S(-1,1,0)<CR>
+nos<Plug>(easymotion-fn) * :<C-U>call EasyMotion#S(-1,0,0)<CR>
+x  <Plug>(easymotion-bd-tl) * <Esc>:<C-U>call EasyMotion#TL(1,1,2)<CR>
+nos<Plug>(easymotion-bd-tl) * :<C-U>call EasyMotion#TL(1,0,2)<CR>
+x  <Plug>(easymotion-fl) * <Esc>:<C-U>call EasyMotion#SL(1,1,0)<CR>
+nos<Plug>(easymotion-fl) * :<C-U>call EasyMotion#SL(1,0,0)<CR>
+x  <Plug>(easymotion-bd-tl2) * <Esc>:<C-U>call EasyMotion#TL(2,1,2)<CR>
+nos<Plug>(easymotion-bd-tl2) * :<C-U>call EasyMotion#TL(2,0,2)<CR>
+x  <Plug>(easymotion-bd-fn) * <Esc>:<C-U>call EasyMotion#S(-1,1,2)<CR>
+nos<Plug>(easymotion-bd-fn) * :<C-U>call EasyMotion#S(-1,0,2)<CR>
+x  <Plug>(easymotion-f) * <Esc>:<C-U>call EasyMotion#S(1,1,0)<CR>
+nos<Plug>(easymotion-f) * :<C-U>call EasyMotion#S(1,0,0)<CR>
+x  <Plug>(easymotion-bd-fl) * <Esc>:<C-U>call EasyMotion#SL(1,1,2)<CR>
+nos<Plug>(easymotion-bd-fl) * :<C-U>call EasyMotion#SL(1,0,2)<CR>
+x  <Plug>(easymotion-Fl2) * <Esc>:<C-U>call EasyMotion#SL(2,1,1)<CR>
+nos<Plug>(easymotion-Fl2) * :<C-U>call EasyMotion#SL(2,0,1)<CR>
+x  <Plug>(easymotion-tl2) * <Esc>:<C-U>call EasyMotion#TL(2,1,0)<CR>
+nos<Plug>(easymotion-tl2) * :<C-U>call EasyMotion#TL(2,0,0)<CR>
+x  <Plug>(easymotion-f2) * <Esc>:<C-U>call EasyMotion#S(2,1,0)<CR>
+nos<Plug>(easymotion-f2) * :<C-U>call EasyMotion#S(2,0,0)<CR>
+x  <Plug>(easymotion-Fln) * <Esc>:<C-U>call EasyMotion#SL(-1,1,1)<CR>
+nos<Plug>(easymotion-Fln) * :<C-U>call EasyMotion#SL(-1,0,1)<CR>
+x  <Plug>(easymotion-sln) * <Esc>:<C-U>call EasyMotion#SL(-1,1,2)<CR>
+nos<Plug>(easymotion-sln) * :<C-U>call EasyMotion#SL(-1,0,2)<CR>
+x  <Plug>(easymotion-tln) * <Esc>:<C-U>call EasyMotion#TL(-1,1,0)<CR>
+nos<Plug>(easymotion-tln) * :<C-U>call EasyMotion#TL(-1,0,0)<CR>
+x  <Plug>(easymotion-fl2) * <Esc>:<C-U>call EasyMotion#SL(2,1,0)<CR>
+nos<Plug>(easymotion-fl2) * :<C-U>call EasyMotion#SL(2,0,0)<CR>
+x  <Plug>(easymotion-bd-fl2) * <Esc>:<C-U>call EasyMotion#SL(2,1,2)<CR>
+nos<Plug>(easymotion-bd-fl2) * :<C-U>call EasyMotion#SL(2,0,2)<CR>
+x  <Plug>(easymotion-T2) * <Esc>:<C-U>call EasyMotion#T(2,1,1)<CR>
+nos<Plug>(easymotion-T2) * :<C-U>call EasyMotion#T(2,0,1)<CR>
+x  <Plug>(easymotion-bd-tln) * <Esc>:<C-U>call EasyMotion#TL(-1,1,2)<CR>
+nos<Plug>(easymotion-bd-tln) * :<C-U>call EasyMotion#TL(-1,0,2)<CR>
+x  <Plug>(easymotion-T) * <Esc>:<C-U>call EasyMotion#T(1,1,1)<CR>
+nos<Plug>(easymotion-T) * :<C-U>call EasyMotion#T(1,0,1)<CR>
+x  <Plug>(easymotion-bd-t) * <Esc>:<C-U>call EasyMotion#T(1,1,2)<CR>
+nos<Plug>(easymotion-bd-t) * :<C-U>call EasyMotion#T(1,0,2)<CR>
+x  <Plug>(easymotion-Tn) * <Esc>:<C-U>call EasyMotion#T(-1,1,1)<CR>
+nos<Plug>(easymotion-Tn) * :<C-U>call EasyMotion#T(-1,0,1)<CR>
+x  <Plug>(easymotion-s2) * <Esc>:<C-U>call EasyMotion#S(2,1,2)<CR>
+nos<Plug>(easymotion-s2) * :<C-U>call EasyMotion#S(2,0,2)<CR>
+x  <Plug>(easymotion-Tl) * <Esc>:<C-U>call EasyMotion#TL(1,1,1)<CR>
+nos<Plug>(easymotion-Tl) * :<C-U>call EasyMotion#TL(1,0,1)<CR>
+x  <Plug>(easymotion-sn) * <Esc>:<C-U>call EasyMotion#S(-1,1,2)<CR>
+nos<Plug>(easymotion-sn) * :<C-U>call EasyMotion#S(-1,0,2)<CR>
+x  <Plug>(easymotion-Fn) * <Esc>:<C-U>call EasyMotion#S(-1,1,1)<CR>
+nos<Plug>(easymotion-Fn) * :<C-U>call EasyMotion#S(-1,0,1)<CR>
+x  <Plug>(easymotion-sl) * <Esc>:<C-U>call EasyMotion#SL(1,1,2)<CR>
+nos<Plug>(easymotion-sl) * :<C-U>call EasyMotion#SL(1,0,2)<CR>
+x  <Plug>(easymotion-Fl) * <Esc>:<C-U>call EasyMotion#SL(1,1,1)<CR>
+nos<Plug>(easymotion-Fl) * :<C-U>call EasyMotion#SL(1,0,1)<CR>
+x  <Plug>(easymotion-sl2) * <Esc>:<C-U>call EasyMotion#SL(2,1,2)<CR>
+nos<Plug>(easymotion-sl2) * :<C-U>call EasyMotion#SL(2,0,2)<CR>
+x  <Plug>(easymotion-bd-fln) * <Esc>:<C-U>call EasyMotion#SL(-1,1,2)<CR>
+nos<Plug>(easymotion-bd-fln) * :<C-U>call EasyMotion#SL(-1,0,2)<CR>
+x  <Plug>(easymotion-F) * <Esc>:<C-U>call EasyMotion#S(1,1,1)<CR>
+nos<Plug>(easymotion-F) * :<C-U>call EasyMotion#S(1,0,1)<CR>
+x  <Plug>(easymotion-bd-f) * <Esc>:<C-U>call EasyMotion#S(1,1,2)<CR>
+nos<Plug>(easymotion-bd-f) * :<C-U>call EasyMotion#S(1,0,2)<CR>
+x  <Plug>(easymotion-F2) * <Esc>:<C-U>call EasyMotion#S(2,1,1)<CR>
+nos<Plug>(easymotion-F2) * :<C-U>call EasyMotion#S(2,0,1)<CR>
+x  <Plug>(easymotion-bd-f2) * <Esc>:<C-U>call EasyMotion#S(2,1,2)<CR>
+nos<Plug>(easymotion-bd-f2) * :<C-U>call EasyMotion#S(2,0,2)<CR>
+x  <Plug>(easymotion-Tl2) * <Esc>:<C-U>call EasyMotion#TL(2,1,1)<CR>
+nos<Plug>(easymotion-Tl2) * :<C-U>call EasyMotion#TL(2,0,1)<CR>
+x  <Plug>(easymotion-fln) * <Esc>:<C-U>call EasyMotion#SL(-1,1,0)<CR>
+nos<Plug>(easymotion-fln) * :<C-U>call EasyMotion#SL(-1,0,0)<CR>
+   <Plug>(indexed-search-after)   <SNR>141_after()
+   <Plug>(indexed-search-restview) * :call <SNR>141_restview()<CR>
+   <Plug>(indexed-search-N) * N
+   <Plug>(indexed-search-n) * n
+x  <Plug>(indexed-search-index) * :<C-U>ShowSearchIndex<CR>gv
+os <Plug>(indexed-search-index) * <Nop>
+x  <Plug>SneakPrevious   <Plug>Sneak_,
+x  <Plug>SneakNext   <Plug>Sneak_;
+x  <Plug>(SneakStreakBackward)   <Plug>SneakLabel_S
+x  <Plug>(SneakStreak)   <Plug>SneakLabel_s
+x  <Plug>VSneakPrevious   <Plug>Sneak_,
+x  <Plug>VSneakNext   <Plug>Sneak_;
+x  <Plug>VSneakBackward   <Plug>Sneak_S
+x  <Plug>VSneakForward   <Plug>Sneak_s
+x  <Plug>SneakLabel_S * :<C-U>call sneak#wrap(visualmode(), 2, 1, 2, 2)<CR>
+x  <Plug>SneakLabel_s * :<C-U>call sneak#wrap(visualmode(), 2, 0, 2, 2)<CR>
+x  <Plug>Sneak_T * :<C-U>call sneak#wrap(visualmode(), 1, 1, 0, 0)<CR>
+x  <Plug>Sneak_t * :<C-U>call sneak#wrap(visualmode(), 1, 0, 0, 0)<CR>
+x  <Plug>Sneak_F * :<C-U>call sneak#wrap(visualmode(), 1, 1, 1, 0)<CR>
+x  <Plug>Sneak_f * :<C-U>call sneak#wrap(visualmode(), 1, 0, 1, 0)<CR>
+x  <Plug>Sneak_, * :<C-U>call sneak#rpt(visualmode(), 1)<CR>
+x  <Plug>Sneak_; * :<C-U>call sneak#rpt(visualmode(), 0)<CR>
+x  <Plug>Sneak_S * :<C-U>call sneak#wrap(visualmode(), 2, 1, 2, 1)<CR>
+x  <Plug>Sneak_s * :<C-U>call sneak#wrap(visualmode(), 2, 0, 2, 1)<CR>
+v  <Plug>(textobj-rubyblock-i) & :<C-U>call g:__textobj_rubyblock.do_by_function("select-i","-","v")<CR>
+v  <Plug>(textobj-rubyblock-a) & :<C-U>call g:__textobj_rubyblock.do_by_function("select-a","-","v")<CR>
+v  <Plug>(textobj-underscore-i) & :<C-U>call g:__textobj_underscore.do_by_function("select-i","-","v")<CR>
+v  <Plug>(textobj-underscore-a) & :<C-U>call g:__textobj_underscore.do_by_function("select-a","-","v")<CR>
+v  <Plug>(textobj-function-i) & :<C-U>call g:__textobj_function.do_by_function("select","i","v")<CR>
+v  <Plug>(textobj-function-A) & :<C-U>call g:__textobj_function.do_by_function("select","A","v")<CR>
+v  <Plug>(textobj-function-I) & :<C-U>call g:__textobj_function.do_by_function("select","I","v")<CR>
+v  <Plug>(textobj-function-a) & :<C-U>call g:__textobj_function.do_by_function("select","a","v")<CR>
+v  <Plug>(textobj-entire-i) & :<C-U>call g:__textobj_entire.do_by_function("select-i","-","v")<CR>
+v  <Plug>(textobj-entire-a) & :<C-U>call g:__textobj_entire.do_by_function("select-a","-","v")<CR>
+v  <Plug>(textobj-datetime-tz) & :<C-U>call g:__textobj_datetime.do_by_pattern("select","tz","v")<CR>
+v  <Plug>(textobj-datetime-auto) & :<C-U>call g:__textobj_datetime.do_by_pattern("select","auto","v")<CR>
+v  <Plug>(textobj-datetime-time) & :<C-U>call g:__textobj_datetime.do_by_pattern("select","time","v")<CR>
+v  <Plug>(textobj-datetime-date) & :<C-U>call g:__textobj_datetime.do_by_pattern("select","date","v")<CR>
+v  <Plug>(textobj-datetime-full) & :<C-U>call g:__textobj_datetime.do_by_pattern("select","full","v")<CR>
+v  <Plug>(textobj-rubysymbol-i) & :<C-U>call g:__textobj_rubysymbol.do_by_function("select-i","-","v")<CR>
+v  <Plug>(textobj-rubysymbol-a) & :<C-U>call g:__textobj_rubysymbol.do_by_function("select-a","-","v")<CR>
+x  <Plug>ColorFgBg * :<C-U>ColorSwapFgBg<CR>
+x  <Plug>ColorContrast * :<C-U>ColorContrast<CR>
+x  <Plug>Colorizer * :ColorHighlight<CR>
+x  <Plug>snipMateVisual * :<C-U>call <SNR>102_grab_visual()<CR>gv"_c
+s  <Plug>snipMateBack * <Esc>a<C-R>=snipMate#BackwardsSnippet()<CR>
+s  <Plug>snipMateNextOrTrigger * <Esc>a<C-R>=snipMate#TriggerSnippet()<CR>
+v  <D-0>         g^
+v  <D-^>         g^
+v  <D-$>         g$
+v  <D-k>         gk
+v  <D-j>         gj
+   <D-%>         :so %<CR>
+v  <D-A>         :Tabularize /
+   <D-9>         :tabn 9<CR>
+   <D-8>         :tabn 8<CR>
+   <D-7>         :tabn 7<CR>
+   <D-6>         :tabn 6<CR>
+   <D-5>         :tabn 5<CR>
+   <D-4>         :tabn 4<CR>
+   <D-3>         :tabn 3<CR>
+   <D-2>         :tabn 2<CR>
+   <D-1>         :tabn 1<CR>
+   <D-/>         :TComment<CR>
+v  <C-Down>      ]egv
+v  <C-Up>        [egv
+v  <BS>          "-d
