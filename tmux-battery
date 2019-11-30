@@ -1,0 +1,1 @@
+pmset -g batt | awk -F '[[:blank:]]+|;' 'NR==2 { print $4 }'
