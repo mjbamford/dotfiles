@@ -59,7 +59,7 @@ vmap ,{ c{<C-R>"}<ESC>
 map ,` ysiw`
 
 " gary bernhardt's hashrocket
-imap <c-l> <space>=><space>
+" imap <c-l> <space>=><space>
 
 "Go to last edit location with ,.
 nnoremap ,. '.
@@ -119,10 +119,10 @@ nnoremap <silent> vv <C-w>v
 nnoremap <silent> ss <C-w>s
 
 " create <%= foo %> erb tags using Ctrl-k in edit mode
-imap <silent> <C-K> <%=   %><Esc>3hi
+" imap <silent> <C-K> <%=   %><Esc>3hi
 
 " create <%= foo %> erb tags using Ctrl-j in edit mode
-imap <silent> <C-J> <%  %><Esc>2hi
+" imap <silent> <C-J> <%  %><Esc>2hi
 
 " ============================
 " Shortcuts for everyday tasks
@@ -169,4 +169,4 @@ map <silent> ,hp :!open -a Safari %<CR><CR>
 " Map Ctrl-x and Ctrl-z to navigate the quickfix error list (normally :cn and
 " :cp)
 nnoremap <silent> <C-x> :cn<CR>
-" nnoremap <silent> <C-z> :cp<CR>
+nnoremap <silent> <S-C-x> :cp<CR>
